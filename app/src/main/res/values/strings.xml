@@ -13,8 +13,8 @@
     <string name="AC_EMAIL">ac_email</string>
     <string name="AC_PHONE">ac_phoneno</string>
     <string name="AC_DEV_ID">ac_dev_id</string>
-    <string name="server_client_id">100567857862-8bnje4tshatf3rpib1plgeg3f412hpmm.apps.googleusercontent.com</string>
-    <string name="facebook_app_id">186921101742785</string>
-    <string name="fb_login_protocol_scheme">fb186921101742785</string>
+    <string name="server_client_id">SERVER_CLIENT_ID</string>
+    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
+    <string name="fb_login_protocol_scheme">FB_LOGIN_PROTOCOL_SCHEME</string>
     <string name="title_activity_navigation">Map</string>
 </resources>
