@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hp.taxicity.DestinationPicker">
+    <item
+        android:id="@+id/action_about_us"
+        android:orderInCategory="101"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        android:title="info"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_auto_no"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_contact_phone_black_24dp"
+        android:title="Auto Walas"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Taxicity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_train">Select Train</string>
+    <string name="select_time">Select Time</string>
+    <string name="select_hostel">Select Hostel</string>
+    <string name="FIRST_USE">First_Use</string>
+    <string name="AC_PIC">ac_pic</string>
+    <string name="AC_UID">ac_uid</string>
+    <string name="AC_NAME">ac_name</string>
+    <string name="AC_EMAIL">ac_email</string>
+    <string name="AC_PHONE">ac_phoneno</string>
+    <string name="AC_DEV_ID">ac_dev_id</string>
+    <string name="server_client_id">100567857862-8bnje4tshatf3rpib1plgeg3f412hpmm.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">186921101742785</string>
+    <string name="fb_login_protocol_scheme">fb186921101742785</string>
+    <string name="title_activity_navigation">Map</string>
+</resources>

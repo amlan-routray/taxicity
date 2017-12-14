@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appsters.igit.taxicity">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="userPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".DestinationPicker"
+            android:theme="@style/CustomTheme" />
+        <activity android:name=".Sherlock"
+            android:screenOrientation="userPortrait"
+            android:label="Profile"/>
+        <activity android:name=".Notifier"
+            android:screenOrientation="userPortrait"
+            android:label="Notification"/>
+        <activity android:name=".SignInActivity"
+            android:screenOrientation="userPortrait"/>
+        <activity xmlns:tools="http://schemas.android.com/tools"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".AboutActivity"
+            android:label="Meet The AppSterS" />
+        <activity
+            android:screenOrientation="userPortrait"
+            android:label="Feedback"
+            android:name=".FeedBack"
+            android:windowSoftInputMode="adjustPan" />
+        <!--
+             The API key for Google Maps-;based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".Navigation"
+            android:label="@string/title_activity_navigation" />
+        <activity android:name=".ContactsRecieved"
+            android:screenOrientation="userPortrait"
+            android:label="Contacts Received"/>
+        <activity android:name=".AcceptRequests"
+            android:screenOrientation="userPortrait"
+            android:label="Accept Requests"/>
+
+        <service android:name=".FcmInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FcmMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <activity android:name=".AutoWalas"
+            android:screenOrientation="userPortrait"
+            android:label="AutoWalas"/>
+    </application>
+</manifest>

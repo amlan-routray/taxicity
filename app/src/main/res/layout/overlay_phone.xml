@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a3000000"
+    android:gravity="center"
+    style="@style/Base.Widget.AppCompat.Button.Borderless">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog">
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="18dp"
+            android:textColor="#2BBDEE"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Phone Number"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true">
+            <TextView
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91-"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="bottom"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTheme">
+            <EditText
+                android:maxLength="10"
+                android:maxLines="1"
+                android:hint="Number here"
+                android:inputType="phone"
+                android:id="@+id/phone_edit_text"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/phone_edit_button"
+            android:layout_gravity="center_horizontal"
+            android:drawableRight="@drawable/auto"
+            android:layout_marginTop="10dp"
+            android:text="Here you Go    "
+            android:textColor="#818181"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            style="@style/Base.Widget.AppCompat.Button.Borderless" />
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

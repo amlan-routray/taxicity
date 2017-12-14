@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="152dp"
+            android:id="@+id/profilePic"
+            android:layout_height="152dp"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:id="@+id/profileName"
+            android:textColor="#000000"
+            android:text="Amlan Jyoti Routray"/>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/profileEmail"
+            android:textColor="#000000"
+            android:text="amlanroutray88@gmail.com"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal">
+                <ImageView
+
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_stay_current_portrait_black_24dp"/>
+                <TextView
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:text="+91-"/>
+                <EditText
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="Enter Number"
+                    android:inputType="number"
+                    android:id="@+id/noChangerButtonEditText"
+                    android:theme="@style/EditTheme"
+                    android:cursorVisible="false"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_right"
+                    android:id="@+id/noChangerButton"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_power_settings_new_black_24dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:textColor="#bababa"
+                    android:text="l  o  g  o  u  t"
+                    android:id="@+id/logout"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

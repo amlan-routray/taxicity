@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId 'com.appsters.igit.taxicity'
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 3
+        versionName '3.0'
+        multiDexEnabled true
+    }
+    dexOptions {
+        javaMaxHeapSize "6g"
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+    }
+    productFlavors {
+    }
+}
+repositories
+        {
+            maven {
+                url "https://jitpack.io"
+            }
+        }
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(include: ['*.java'], dir: 'libs')
+    compile fileTree(include: ['*.so'], dir: 'libs')
+    compile files('libs/GenAsync.1.2.jar')
+    compile('com.github.ozodrukh:CircularReveal:2.0.1@aar') {
+        transitive = true;
+    }
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.github.jd-alexander:LikeButton:0.2.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.google.android.gms:play-services:9.6.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'me.relex:circleindicator:1.2.1@aar'
+    compile 'com.google.firebase:firebase-messaging:9.6.1'
+    testCompile 'junit:junit:4.12'
+}
+
+
+apply plugin: 'com.google.gms.google-services'

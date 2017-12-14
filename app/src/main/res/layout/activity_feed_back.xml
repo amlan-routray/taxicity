@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.v4.widget.NestedScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_feed_back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <com.like.LikeButton
+            android:layout_margin="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon_size="25dp"
+            app:like_drawable="@drawable/sad_clicked"
+            app:unlike_drawable="@drawable/sad_unclicked"
+            app:dots_primary_color="@color/colorPrimary"
+            app:dots_secondary_color="@color/colorPrimary"
+            app:circle_start_color="@color/colorPrimary"
+            app:circle_end_color="@color/colorPrimary"
+            android:id="@+id/notHappy"/>
+        <com.like.LikeButton
+            android:layout_margin="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon_size="25dp"
+            app:like_drawable="@drawable/thumb_up"
+            app:unlike_drawable="@drawable/thumbs_up_not"
+            app:dots_primary_color="#00b0ff"
+            app:dots_secondary_color="#00b0ff"
+            app:circle_start_color="#00b0ff"
+            app:circle_end_color="#00b0ff"
+            android:id="@+id/likedIt"/>
+        <com.like.LikeButton
+            android:layout_margin="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon_size="25dp"
+            app:icon_type="heart"
+            android:id="@+id/lovedIt"/>
+        </LinearLayout>
+        <EditText
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:textAlignment="center"
+            android:id="@+id/feedbackComment"
+            android:maxLength="200"
+            android:padding="10dp"
+            android:background="@drawable/feedback_edit"
+        />
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Submit"
+            android:id="@+id/submit_btn"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/feedback_sub"
+            android:layout_marginTop="26dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:id="@+id/feedbackRecycler"
+        android:layout_alignBottom="@+id/fb_fab"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+<android.support.design.widget.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:theme="@style/EditTheme"
+    android:src="@drawable/ic_facebook"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_margin="20dp"
+    android:id="@+id/fb_fab"
+    app:fabSize="normal" />
+</RelativeLayout>
